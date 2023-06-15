@@ -68,7 +68,7 @@ export class MidjourneyApi {
       channel_id: this.config.ChannelId,
       session_id: this.config.SessionId,
       data: {
-        version: "1077969938624553050",
+        version: "1118961510123847772",
         id: "938956540159881230",
         name: "imagine",
         type: 1,
@@ -330,9 +330,7 @@ export class MidjourneyApi {
       return (await response.json()) as { attachments: UploadSlot[] };
     }
     throw new Error(
-      `Attachments return ${response.status} ${
-        response.statusText
-      } ${await response.text()}`
+      `Attachments return ${response.status} ${response.statusText} ${await response.text()}`
     );
   }
   private async uploadImage(
@@ -349,9 +347,7 @@ export class MidjourneyApi {
     });
     if (!response.ok) {
       throw new Error(
-        `uploadImage return ${response.status} ${
-          response.statusText
-        } ${await response.text()}`
+        `uploadImage return ${response.status} ${response.statusText} ${await response.text()}`
       );
     }
   }
